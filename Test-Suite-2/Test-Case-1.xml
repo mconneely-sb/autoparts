@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase xmlns:con="http://eviware.com/soapui/config" id="0576ce7c-3d5c-4bb8-8f35-0332a599223a" discardOkResults="true" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="Test Case 1" searchProperties="true" timeout="0">
+  <con:settings id="4c6af342-92da-4543-8192-b59fc352744d">
+    <con:setting id="IncludeOverview">true</con:setting>
+    <con:setting id="IncludeResults">true</con:setting>
+    <con:setting id="FlowLayout">false</con:setting>
+    <con:setting id="ErrorDetails">true</con:setting>
+    <con:setting id="IncludeCoverage">true</con:setting>
+    <con:setting id="0576ce7c-3d5c-4bb8-8f35-0332a599223afileName">Test-Case-1</con:setting>
+  </con:settings>
+  <con:testStep type="delay" name="Delay" id="f7c1e625-cd33-4022-b520-67513aa1b25b">
+    <con:settings/>
+    <con:config>
+      <delay>10000</delay>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="REST Request" id="d55861f1-5bdb-40ee-a971-15ea98e62d7e">
+    <con:settings/>
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" service="Simple Banking API V2.0.0" resourcePath="/MConneely/Banking-API/2.0.0/accounts" methodName="addaccounts" xsi:type="con:RestRequestStep">
+      <con:restRequest name="REST Request" id="ec4b1528-992e-4632-ac23-0921bdd1f107" mediaType="application/json" postQueryString="false">
+        <con:settings/>
+        <con:endpoint>https://virtserver.swaggerhub.com</con:endpoint>
+        <con:request>{\r
+  "id" : "d290f1ee-6c54-4b01-90e6-d701748f0851",\r
+  "name" : "Joe Bloggs",\r
+  "createdDate" : "2016-08-29T09:12:33.001Z",\r
+  "accountType" : {\r
+    "name" : "Personal",\r
+    "homePage" : "https://www.personal-banking.com",\r
+    "phone" : "408-867-5309"\r
+  }\r
+}</con:request>
+        <con:originalUri>https://virtserver.swaggerhub.com/MConneely/Banking-API/2.0.0/accounts</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="f8f40e2b-cbb7-49b2-b85a-850c4d2ad35c" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="560c31b4-91ab-4e29-99b1-f6f57ef9fad8" name="Response SLA">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>

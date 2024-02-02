@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config" name="/accounts" path="/accounts" id="b1e62d35-31b1-4fb8-9232-24993a7227f4">
+  <con:settings id="de9c1aa7-a088-4df0-a913-21fe808a3ec3">
+    <con:setting id="b1e62d35-31b1-4fb8-9232-24993a7227f4fileName">%2Faccounts</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="searchaccounts" id="022d7cb8-a498-4558-8a58-4b29f4a9e8a3" method="GET">
+    <con:description>By passing in the appropriate options, you can search for
+available accounts in the system
+
+searches accounts</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>number_id</con:name>
+        <con:style>QUERY</con:style>
+        <con:dataType>integer</con:dataType>
+        <con:description>pass an optional search string for looking up accounts</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>NumberId</con:name>
+        <con:style>QUERY</con:style>
+        <con:dataType>integer</con:dataType>
+        <con:description>pass an optional search string for looking up accounts</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>skip</con:name>
+        <con:style>QUERY</con:style>
+        <con:dataType>integer</con:dataType>
+        <con:description>number of records to skip for pagination</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>limit</con:name>
+        <con:style>QUERY</con:style>
+        <con:dataType>integer</con:dataType>
+        <con:description>maximum number of records to return</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:sampleContent>[ {
+  "id" : "d290f1ee-6c54-4b01-90e6-d701748f0851",
+  "name" : "Joe Bloggs",
+  "createdDate" : "2016-08-29T09:12:33.001Z",
+  "accountType" : {
+    "name" : "Personal",
+    "homePage" : "https://www.personal-banking.com",
+    "phone" : "408-867-5309"
+  }
+} ]</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+    </con:representation>
+    <con:request name="Request 1" id="f829153a-59fd-4d3e-bd38-f3c8780112cf" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://virtserver.swaggerhub.com</con:endpoint>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="addaccounts" id="f43e0450-2fc4-4461-8627-e2748b28df6b" method="POST">
+    <con:description>Adds an item to the system
+adds an accounts item</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{
+  "id" : "d290f1ee-6c54-4b01-90e6-d701748f0851",
+  "name" : "Joe Bloggs",
+  "createdDate" : "2016-08-29T09:12:33.001Z",
+  "accountType" : {
+    "name" : "Personal",
+    "homePage" : "https://www.personal-banking.com",
+    "phone" : "408-867-5309"
+  }
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:sampleContent>[ {
+  "id" : "d290f1ee-6c54-4b01-90e6-d701748f0851",
+  "name" : "Joe Bloggs",
+  "createdDate" : "2016-08-29T09:12:33.001Z",
+  "accountType" : {
+    "name" : "Personal",
+    "homePage" : "https://www.personal-banking.com",
+    "phone" : "408-867-5309"
+  }
+} ]</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>409</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json</con:mediaType>
+      <con:params/>
+    </con:representation>
+    <con:request name="Request 1" id="ec4b1528-992e-4632-ac23-0921bdd1f107" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://virtserver.swaggerhub.com</con:endpoint>
+      <con:request>{\r
+  "id" : "d290f1ee-6c54-4b01-90e6-d701748f0851",\r
+  "name" : "Joe Bloggs",\r
+  "createdDate" : "2016-08-29T09:12:33.001Z",\r
+  "accountType" : {\r
+    "name" : "Personal",\r
+    "homePage" : "https://www.personal-banking.com",\r
+    "phone" : "408-867-5309"\r
+  }\r
+}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>
